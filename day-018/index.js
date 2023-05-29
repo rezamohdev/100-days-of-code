@@ -11,5 +11,5 @@ const wave = (str) => {
     return arr;
 
 }
-console.log(wave("hello"));;
-console.log(wave("mexican wave"));;
+console.log(wave("hello"));
+console.log(wave("mexican wave"));

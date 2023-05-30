@@ -1,0 +1,19 @@
+{
+  "name": "100-days-of-code",
+  "version": "1.0.0",
+  "description": "100 days of code challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rezamohdev/100-days-of-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rezamohdev/100-days-of-code/issues"
+  },
+  "homepage": "https://github.com/rezamohdev/100-days-of-code#readme"
+}

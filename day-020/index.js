@@ -26,3 +26,23 @@ const result = promiseSequence(inputs, promiseMaker);
 result.then(outputs => {
     console.log(outputs); // [1, 4, 9]
 });
+
+function elapsedTime(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// An async generator function that increments a counter and yields it
+// a specified (or infinite) number of times at a specified interval.
+async function* clock(interval, max = Infinity) {
+    for (let count = 1; count <= max; count++) { // regular for loop
+        await elapsedTime(interval);            // wait for time to pass
+        yield count;                            // yield the counter
+    }
+}
+
+// A test function that uses the async generator with for/await
+async function test() {                       // Async so we can use for/await
+    for await (let tick of clock(3, 1000)) { // Loop 100 times every 300ms
+        console.log(tick);
+    }
+}

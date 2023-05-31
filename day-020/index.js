@@ -12,3 +12,17 @@ function promiseSequence(inputs, promiseMaker) {
     }
     return Promise.resolve([]).then(handleNextInput);
 }
+
+const inputs = [1, 2, 3];
+const promiseMaker = (input) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(input * input);
+        }, 1000);
+    });
+};
+
+const result = promiseSequence(inputs, promiseMaker);
+result.then(outputs => {
+    console.log(outputs); // [1, 4, 9]
+});

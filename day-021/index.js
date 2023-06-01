@@ -2,7 +2,6 @@ const parse = data => {
 
     var response = [];
     var num = 0;
-
     data.split("").forEach(function (val) {
 
         if (val == "d") {

@@ -35,19 +35,19 @@ function addPostToDOM(container, markup) {
 
 const container = document.querySelector('.container');
 
-// function getPosts() {
-//     fetch("https://jsonplaceholder.typicode.com/posts")
-//         .then((response) => {
-//             return response.json();
-//         })
-//         .then((posts) => {
-//             console.log(posts);
-//             posts.forEach(post => {
-//                 addPostToDOM(container, createPostMarkup(post));
+function getPosts() {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => {
+            return response.json();
+        })
+        .then((posts) => {
+            console.log(posts);
+            posts.forEach(post => {
+                addPostToDOM(container, createPostMarkup(post));
 
-//             });
-//         });
-// }
+            });
+        });
+}
 
 function createPost(newPost) {
     fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -72,5 +72,5 @@ function createPost(newPost) {
 }
 
 
-// getPosts();
+getPosts();
 createPost();
